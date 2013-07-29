@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Tweets from @handle</h1>
+  <p>Recent Tweets from @handle!</p>
+
+  <table>
+    <tr>
+      <th>Tweet</th>
+<% @tweets.each do |tweet| %>
+        <tr><td>
+          <%= tweet.text %>
+        </td></tr>
+<% end %>
+  </table>
+</div>
