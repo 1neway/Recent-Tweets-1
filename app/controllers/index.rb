@@ -4,11 +4,7 @@ get '/' do
 end
 
 get '/:username' do
-  # Recent Tweets
-  p params
-  #@user = Twitter.user(params[:username])
-  @user = Twitter.user("AirDisa")
-  @tweets = Twitter.user_timeline("AirDisa")
-  #@friend_count = @user.
+  @user = Twitter.user(params[:username])
+  @tweets = Twitter.user_timeline(@user, :count => 10)
   erb :tweets
 end

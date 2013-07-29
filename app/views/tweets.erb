@@ -1,14 +1,14 @@
 <div class="container">
-  <h1>Tweets from @handle</h1>
-  <p>Recent Tweets from @handle!</p>
+  <h1>Tweets from <%= @user.name %></h1>
+  <p><a style="text-decoration:none;" target="_blank" href="https://twitter.com/<%= @user.handle %>">@<%= @user.handle %></a></p>
 
   <table>
     <tr>
       <th>Tweet</th>
-<% @tweets.each do |tweet| %>
+        <% @tweets.each do |tweet| %>
         <tr><td>
           <%= tweet.text %>
         </td></tr>
-<% end %>
+        <% end %>
   </table>
 </div>
